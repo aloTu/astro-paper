@@ -1,0 +1,16 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+// import { Content, components } from "../content/blog/rustlings-solution.mdx";
+import Heading from "@components/Heading.astro";
+const posts = await getCollection("blog", ({ data }) => !data.draft);
+
+const postResult = posts.map(post => ({
+  params: { slug: post.slug },
+  props: { post },
+}));
+
+const { Content, components } = await postResult[1].props.post.render();
+---
+
+<!-- Creates a custom <h1> for the # syntax, _and_ applies any custom components defined in `content.mdx` -->
+<Content components={{ ...components, h2: Heading }} />
