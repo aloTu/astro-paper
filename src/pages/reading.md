@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/BaseLayout.astro
 title: 最近阅读
+activeNav: reading
 ---
 
 <p class="flex">
