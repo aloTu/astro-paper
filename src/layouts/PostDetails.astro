@@ -7,7 +7,6 @@ import Datetime from "@components/Datetime";
 import type { CollectionEntry } from "astro:content";
 import { slugifyStr } from "@utils/slugify";
 import ShareLinks from "@components/ShareLinks.astro";
-import Heading from '@components/Heading.astro';
 
 export interface Props {
   post: CollectionEntry<"blog">;
@@ -26,7 +25,7 @@ const {
   tags,
 } = post.data;
 
-const { Content, components } = await post.render();
+const { Content } = await post.render();
 
 const ogImageUrl = typeof ogImage === "string" ? ogImage : ogImage?.src;
 const ogUrl = new URL(
@@ -69,7 +68,7 @@ const layoutProps = {
       className="my-2"
     />
     <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
-      <Content components={{...components, h2: Heading}}/>
+      <Content/>
     </article>
 
     <ul class="my-8">
