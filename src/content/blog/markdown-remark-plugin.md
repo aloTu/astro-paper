@@ -3,6 +3,7 @@ pubDatetime: 2024-01-04T15:00:00Z
 title: Markdown Remark Plugin Dev
 tags:
   - Markdown
+draft: true
 description: add a markdown plugin to custom render my code like codehike
 ---
 

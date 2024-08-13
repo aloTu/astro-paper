@@ -3,6 +3,7 @@ pubDatetime: 2024-01-04T15:00:00Z
 title: Rustlings solution
 tags:
   - color-schemes
+draft: true
 description: my rustlings answers
 ---
 
