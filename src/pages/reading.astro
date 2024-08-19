@@ -1,0 +1,36 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import Main from "@layouts/Main.astro";
+
+const config = [
+  {
+    label: "web-component",
+    href: "https://juejin.cn/post/6969341653760868360",
+    time: "2022-10-11 08:32",
+  },
+];
+---
+
+<Layout>
+  <Header />
+  <Main pageTitle="Reading">
+    <ul>
+      {
+        config.map(item => (
+          <li class="flex">
+            <a
+              class="flex-1 font-medium underline decoration-dashed underline-offset-8 hover:text-skin-accent"
+              href={item.href}
+            >
+              {item.label}
+            </a>
+            <span>{item.time}</span>
+          </li>
+        ))
+      }
+    </ul>
+  </Main>
+  <Footer />
+</Layout>
