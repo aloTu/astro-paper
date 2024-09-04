@@ -37,7 +37,7 @@ const { tag, tagName } = Astro.props;
 
 const posts = await getCollection("blog", ({ data }) => !data.draft);
 
-const postsByTag = getPostsByTag(posts, tag);
+const postsByTag = await getPostsByTag(posts, tag);
 
 const pagination = getPagination({
   posts: postsByTag,
