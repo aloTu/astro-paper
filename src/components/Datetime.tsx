@@ -8,7 +8,7 @@ interface DatetimesProps {
 interface Props extends DatetimesProps {
   size?: "sm" | "lg";
   className?: string;
-  readingTime?: string
+  readingTime?: string;
 }
 
 export default function Datetime({

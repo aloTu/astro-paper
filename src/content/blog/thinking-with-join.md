@@ -1,7 +1,7 @@
 ---
 title: Thinking with join(译)
 pubDatetime: 2024-08-14T11:05:22+08
-description: add a markdown plugin to custom render my code like codehike
+description: D3.js join 方法 解析
 tags:
   - D3.js
 ---
@@ -17,7 +17,7 @@ svg.append("circle").attr("cx", d.x).attr("cx", d.y).attr("r", 2.5);
 ```
 
 <side-note>
-  Here svg refers to a single-element selection containing an &ltsvg&gt element created previously (or selected from the current page, say).
+  这里的 "svg" 指的是一个包含之前创建的（或者从当前页面中选择的）单个 &ltsvg&gt 元素的选择。
 </side-note>
 
 但这只是一个圆， 而你需要的是每一条数据生成一个圆。
